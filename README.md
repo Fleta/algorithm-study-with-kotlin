@@ -14,7 +14,7 @@ https://fleta.github.io/others/2022/01/algorithm-study/
 
 ## Contribution guide
 
-- 혹시 개선해야 할 점이 있다면 fork하신 뒤 master를 기준으로 브랜치를 생성하여 수정하시고 forked repo에 push하신 뒤 origin repo에서 master branch에 PR 부탁드립니다.
+혹시 개선해야 할 점이 있다면 fork하신 뒤 master를 기준으로 브랜치를 생성하여 수정하시고 forked repo에 push하신 뒤 origin repo에서 master branch에 PR 부탁드립니다.
 
 ## 진행 상황
 
