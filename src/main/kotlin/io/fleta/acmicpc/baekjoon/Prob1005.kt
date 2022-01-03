@@ -7,6 +7,9 @@ import java.util.LinkedList
 
 import kotlin.math.max
 
+/**
+ * topological sort를 하면서 현재 node의 weight를 update를 하는 문제
+ */
 fun main() {
     val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
     val testCaseCount = bufferedReader.readLine().toInt()
