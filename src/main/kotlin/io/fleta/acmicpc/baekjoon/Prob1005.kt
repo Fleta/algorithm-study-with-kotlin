@@ -27,7 +27,7 @@ fun main() {
         }
 
         val endNode = bufferedReader.readLine().toInt()
-        println(sort(drawTree(constructTimes, tuples)).get(endNode - 1).totalStructTime)
+        println(sort(drawTree(constructTimes, tuples))[endNode - 1].totalStructTime)
     }
 }
 
@@ -35,7 +35,7 @@ fun drawTree(constructTimes: IntArray, tuples: MutableList<Pair<Int, Int>>): Mut
     val nodes = mutableListOf<Node>()
 
     constructTimes.forEach { time -> nodes.add(Node(time)) }
-    tuples.forEach {tuple -> nodes.get(tuple.first - 1) isParentOf nodes.get(tuple.second - 1)}
+    tuples.forEach { tuple -> nodes[tuple.first - 1] isParentOf nodes[tuple.second - 1] }
 
     return nodes
 }
