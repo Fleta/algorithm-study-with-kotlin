@@ -20,7 +20,7 @@ class Prob17387 {
         // a x b (cross product)
         val calculated = ((p2.first - p1.first) * (p3.second - p1.second)) - ((p3.first - p1.first) * (p2.second - p1.second))
 
-        // TODO: 이렇게 안 바꿔주면 틀림. 왜인지는 아직 잘 모르겠음.
+        // ccw * ccw를 하면 long의 범위를 벗어날 수 있기 때문에 방향값만 체크하여 정제
         return when {
             calculated < 0L -> -1
             calculated == 0L -> 0
