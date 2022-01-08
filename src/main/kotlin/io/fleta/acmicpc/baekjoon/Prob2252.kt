@@ -6,7 +6,9 @@ import java.util.LinkedList
 import java.util.Queue
 import java.util.StringTokenizer
 
-
+/**
+ * topological sort
+ */
 fun main() {
     val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
     var stk = StringTokenizer(bufferedReader.readLine())

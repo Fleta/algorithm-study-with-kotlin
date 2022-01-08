@@ -22,4 +22,5 @@ https://fleta.github.io/others/2022/01/algorithm-study/
 | :-: | :------------------------------------------------------- | :--- |
 | 01  | [Baekjoon_1005_Acm_Craft](./src/main/kotlin/io/fleta/acmicpc/baekjoon/Prob1005.kt) |      |
 | 02  | [Baekjoon_2252_줄세우기](./src/main/kotlin/io/fleta/acmicpc/baekjoon/Prob2252.kt) |      |
+| 02  | [Baekjoon_1197_최소_스패닝_트리](./src/main/kotlin/io/fleta/acmicpc/baekjoon/Prob1197.kt) |      |
 
