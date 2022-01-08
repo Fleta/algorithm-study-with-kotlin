@@ -70,6 +70,5 @@ class Prob1197 {
 }
 
 fun main() {
-    val c = Prob1197()
-    c.main()
+    Prob1197().main()
 }
