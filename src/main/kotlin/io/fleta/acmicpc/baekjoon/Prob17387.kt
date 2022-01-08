@@ -6,6 +6,8 @@ import java.util.StringTokenizer
 import kotlin.math.max
 import kotlin.math.min
 
+typealias Point = Pair<Long, Long>
+
 class Prob17387 {
     fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
         var stk = StringTokenizer(readLine())
@@ -16,7 +18,7 @@ class Prob17387 {
         println(if (validate(p1, p2, p3, p4)) 1 else 0)
     }
 
-    fun ccw(p1: Pair<Long, Long>, p2: Pair<Long, Long>, p3: Pair<Long, Long>): Long {
+    fun ccw(p1: Point, p2: Point, p3: Point): Int {
         // a x b (cross product)
         val calculated = ((p2.first - p1.first) * (p3.second - p1.second)) - ((p3.first - p1.first) * (p2.second - p1.second))
 
@@ -28,7 +30,7 @@ class Prob17387 {
         }
     }
 
-    fun validate(p1: Pair<Long, Long>, p2: Pair<Long, Long>, p3: Pair<Long, Long>, p4: Pair<Long, Long>): Boolean {
+    fun validate(p1: Point, p2: Point, p3: Point, p4: Point): Boolean {
         // has duplicated point
         val p123 = ccw(p1, p2, p3)
         val p124 = ccw(p1, p2, p4)
@@ -37,14 +39,14 @@ class Prob17387 {
 
         var flag = false
 
-        if (p123 * p124 == 0L && p341 * p342 == 0L) {
+        if (p123 * p124 == 0 && p341 * p342 == 0) {
             flag = true
             if (pointCompare(p1, p2, p3, p4)) {
                 return true
             }
         }
 
-        if (p123 * p124 <= 0L && p341 * p342 <= 0L) {
+        if (p123 * p124 <= 0 && p341 * p342 <= 0) {
             if (!flag) {
                  return true
             }
@@ -53,7 +55,7 @@ class Prob17387 {
         return false
     }
 
-    fun pointCompare(p1: Pair<Long, Long>, p2: Pair<Long, Long>, p3: Pair<Long, Long>, p4: Pair<Long, Long>): Boolean {
+    fun pointCompare(p1: Point, p2: Point, p3: Point, p4: Point): Boolean {
         return min(p1.first, p2.first) <= max(p3.first, p4.first)
                 && min(p1.second, p2.second) <= max(p3.second, p4.second)
                 && min(p3.first, p4.first) <= max(p1.first, p2.first)
